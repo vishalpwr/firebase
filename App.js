@@ -9,6 +9,7 @@ const App = () => {
   return (
     <ScrollView contentContainerStyle={{ paddingBottom: 40 }} style={styles.container}>
       <StatusBar backgroundColor={'white'} barStyle="dark-content" />
+      <Text style={styles.text}>Firebase Authentications</Text>
       <GoogleSignIn />
       <EmailSignIn />
       <PhoneSignIn />
@@ -20,6 +21,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
+  },
+  text: {
+    fontSize: 16,
   },
 })
 

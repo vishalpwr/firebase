@@ -15,7 +15,7 @@ export default function PhoneSignIn() {
     await auth().signInWithPhoneNumber(phoneNumber)
       .then((res) => {
         setConfirm(res);
-        console.log(res);
+        // console.log(res);
       }).catch(e => Alert.alert('error', e.message));
     setLoading(false);
   }
