@@ -13,7 +13,8 @@ npm run ios or yarn ios
 ```
 1. **create new firebase project from firebase console**
 2. **add google-services.json file in android/app folder**
-3. **add sha keys in firebase project**
+3. **add sha keys in firebase project settings**
+
 
 ____________________________________________________________________
 ### Generate keystore

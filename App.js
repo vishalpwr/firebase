@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
-import { View, Text, StatusBar, StyleSheet, ScrollView } from 'react-native';
+import React from 'react';
+import { Text, StatusBar, StyleSheet, ScrollView } from 'react-native';
+import EmailSignIn from './src/components/EmailSignIn';
 import GoogleSignIn from './src/components/GoogleSignIn';
+import PhoneSignIn from './src/components/PhoneSignIn';
 
 const App = () => {
 
@@ -9,6 +11,8 @@ const App = () => {
       <StatusBar backgroundColor={'white'} barStyle="dark-content" />
       <Text style={styles.text}>Firebase Authentications</Text>
       <GoogleSignIn />
+      <EmailSignIn />
+      <PhoneSignIn />
     </ScrollView>
   )
 }
