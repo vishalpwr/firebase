@@ -3,6 +3,7 @@ import React from 'react';
 import { Text, StatusBar, StyleSheet, ScrollView } from 'react-native';
 import EmailSignIn from './src/components/EmailSignIn';
 import GoogleSignIn from './src/components/GoogleSignIn';
+import PhoneSignIn from './src/components/PhoneSignIn';
 
 GoogleSignin.configure({
   webClientId: 'XXXX-XXXXXX.apps.googleusercontent.com',
@@ -16,6 +17,7 @@ const App = () => {
       <Text style={styles.text}>Firebase Authentications</Text>
       <GoogleSignIn />
       <EmailSignIn />
+      <PhoneSignIn />
     </ScrollView>
   )
 }
