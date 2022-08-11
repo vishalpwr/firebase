@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "XXXXXXXXXXX",
+    "project_id": "XXXXXXXXXXX",
+    "storage_bucket": "XXXXXXXXXXX.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "XXXXXXXXXXX:android:XXXXXXXXXXX",
+        "android_client_info": {
+          "package_name": "com.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "XXXXXXXXXXX-XXXXXXXXXXX.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.firebase",
+            "certificate_hash": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+          }
+        },
+        {
+          "client_id": "XXXXXXXXXXX-XXXXXXXXXXX.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "XXXXXXXXXXX"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "XXXXXXXXXXX-XXXXXXXXXXX.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
