@@ -1,4 +1,18 @@
+[![React-Native](https://img.shields.io/badge/React%20Native-333.svg?style=for-the-badge&logo=react&labelColor=4630eb&logoWidth=30&logoColor=fff)](https://reactnative.dev/) [![supports iOS and Android](https://img.shields.io/badge/Getting%20Started-4630EB.svg?style=for-the-badge&labelColor=000)](https://reactnative.dev/docs/getting-started) [![Subscribe To The Channel](https://img.shields.io/badge/Subscribe-red.svg?style=for-the-badge&logo=youtube&labelColor=red&logoWidth=20&logoColor=fff)](https://www.youtube.com/channel/UCC6L3eilEVJhhqiAdepWcng)
+
 # Firebase
+
+### Demo
+<p>
+<picture>
+  <source width="240" media="(prefers-color-scheme: dark)" srcset="https://github.com/vishalpwr/firebase/blob/master/imgs/auth1.png">
+  <img src="hhttps://github.com/vishalpwr/firebase/blob/master/imgs/auth1.png">
+</picture>
+<picture>
+  <source width="240" media="(prefers-color-scheme: dark)" srcset="https://github.com/vishalpwr/firebase/blob/master/imgs/auth2.png">
+  <img src="hhttps://github.com/vishalpwr/firebase/blob/master/imgs/auth2.png">
+</picture>
+</p>
 
 clone then repo and then go into root dir of the app and run
 ```
