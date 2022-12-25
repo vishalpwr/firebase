@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, StyleSheet, Alert, TextInput } from 'react-native';
 import auth from '@react-native-firebase/auth';
 import Button from './Button';
+import Colors from '../Colors';
 
 const EmailSignIn = () => {
   const [loading, setLoading] = useState(false)
@@ -57,7 +58,7 @@ const EmailSignIn = () => {
     setLoading(false);
   }
   return (
-    <View style={styles.separator}>
+    <View style={styles.container}>
       <TextInput
         value={email}
         placeholder='Email'
@@ -70,37 +71,34 @@ const EmailSignIn = () => {
         onChangeText={text => setPassword(text)}
         style={styles.input}
       />
-      <Button
-        loading={loading}
-        title={'Email/Password sign-up'}
-        onPress={emailSignUp} />
-      <Button
-        loading={loading}
-        title={'Email/Password sign-in'}
-        onPress={emailSignIn} />
-      <Button
-        loading={loading}
-        title={'Email/Password sign-out'}
-        onPress={emailSignOut} />
+      <View style={styles.buttons}>
+        <Button
+          loading={loading}
+          title={'Sign-up'}
+          onPress={emailSignUp} />
+        <Button
+          loading={loading}
+          title={'Sign-in'}
+          onPress={emailSignIn} />
+      </View>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-  separator: {
-    alignItems: 'center',
-    paddingVertical: 20,
-    borderBottomWidth: 2,
+  container: {
   },
   input: {
-    backgroundColor: '#eee',
+    backgroundColor: Colors.alphaPrimary,
+    width: '100%',
+    borderRadius: 10,
     marginVertical: 10,
-    width: '80%',
-    borderRadius: 8,
-    borderWidth: 1,
-    borderColor: 'blue',
     padding: 10,
-  }
+    paddingHorizontal: 16,
+  },
+  buttons: {
+    marginVertical: 10,
+  },
 })
 
 export default EmailSignIn;

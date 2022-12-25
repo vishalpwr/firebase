@@ -1,35 +1,27 @@
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
-import { Text, StatusBar, StyleSheet, ScrollView } from 'react-native';
-import EmailSignIn from './src/components/EmailSignIn';
-import GoogleSignIn from './src/components/GoogleSignIn';
-import PhoneSignIn from './src/components/PhoneSignIn';
+import AuthPage from './src/screens/AuthPage';
+import PhoneOtpSignIn from './src/screens/PhoneOtpSignIn';
 
 GoogleSignin.configure({
   webClientId: 'XXXX-XXXXXX.apps.googleusercontent.com',
 });
 
-const App = () => {
+const Stack = createStackNavigator();
 
+const App = () => {
   return (
-    <ScrollView contentContainerStyle={{ paddingBottom: 40 }} style={styles.container}>
-      <StatusBar backgroundColor={'white'} barStyle="dark-content" />
-      <Text style={styles.text}>Firebase Authentications</Text>
-      <GoogleSignIn />
-      <EmailSignIn />
-      <PhoneSignIn />
-    </ScrollView>
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{
+        headerShown: false,
+      }}>
+        <Stack.Screen name="AuthPage" component={AuthPage} />
+        <Stack.Screen name="PhoneSignIn" component={PhoneOtpSignIn} />
+      </Stack.Navigator>
+    </NavigationContainer>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 20,
-  },
-  text: {
-    fontSize: 16,
-  },
-})
 
 export default App;

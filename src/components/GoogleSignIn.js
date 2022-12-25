@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Alert } from 'react-native';
+import { View, StyleSheet, Alert, TouchableOpacity, Text, ActivityIndicator, Image } from 'react-native';
 import { GoogleSignin, GoogleSigninButton, statusCodes } from '@react-native-google-signin/google-signin';
 import auth from '@react-native-firebase/auth';
-import Button from './Button';
+import Button, { ImageButton } from './Button';
 
 const GoogleSignIn = () => {
   const [loading, setLoading] = useState(false)
@@ -40,12 +40,12 @@ const GoogleSignIn = () => {
   }
 
   return (
-    <View style={styles.separator}>
-      <Button
-        loading={loading}
-        title={'Google Sign-In'}
+    <View style={styles.container}>
+      <ImageButton size={28}
+        title={'Google'}
+        image={require('../assets/images/g.png')}
         onPress={googleSignIn} />
-      <GoogleSigninButton
+      {/* <GoogleSigninButton
         style={{ width: 192, height: 48 }}
         size={GoogleSigninButton.Size.Wide}
         color={GoogleSigninButton.Color.Dark}
@@ -55,21 +55,16 @@ const GoogleSignIn = () => {
       <Button
         loading={loading}
         title={'Google Sign-Out'}
-        onPress={googleSignOut} />
+        onPress={googleSignOut} /> */}
     </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    padding: 20,
   },
-  separator: {
-    alignItems: 'center',
-    paddingVertical: 20,
-    borderBottomWidth: 2,
-    borderColor: 'gray'
+  googleBtn: {
+    margin: 10,
   },
 })
 
